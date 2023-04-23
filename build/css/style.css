@@ -872,6 +872,172 @@ button,
   }
 }
 
+.gym__container {
+  padding: 120px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+  grid-template-columns: repeat(2, auto);
+  gap: 24px;
+}
+
+.gym__content {
+  max-width: 355px;
+  margin: 39px 0 10px 0;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 1199px) {
+  .gym__content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .gym__content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.gym__content h2 {
+  margin: 0 0 7px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 1199px) {
+  .gym__content h2 {
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__content h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.gym__content b {
+  margin: 0 0 39px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+@media (max-width: 1199px) {
+  .gym__content b {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__content b {
+    margin-bottom: 40px;
+  }
+}
+
+.gym__content p {
+  margin: 0 0 8px;
+  font-weight: 300;
+}
+@media (max-width: 1199px) {
+  .gym__content p:nth-of-type(n+2) {
+    display: none;
+  }
+}
+
+.gym__media {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+@media (max-width: 767px) {
+  .gym__image {
+    width: 100vw;
+    margin-left: -15px;
+    margin-bottom: 40px;
+  }
+  .gym__image img {
+    width: 100%;
+  }
+}
+
+.gym__video {
+  margin-top: -17.1%;
+  margin-left: -9.5%;
+  width: 364px;
+  height: 228px;
+}
+@media (max-width: 767px) {
+  .gym__video {
+    width: 100vw;
+    margin-left: -15px;
+  }
+  .gym__video img {
+    width: 100%;
+  }
+}
+
+.video {
+  position: relative;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+  padding: 0;
+  padding-left: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
+  background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
+  border-radius: 100%;
+  border: none;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-box-shadow: 0 0 0 10px transparent;
+          box-shadow: 0 0 0 10px transparent;
+  cursor: pointer;
+}
+.video__button::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0) url("./../img/svg/play-circle.svg") no-repeat center;
+}
+.video__button:hover svg, .video__button:focus svg {
+  -webkit-transform: translateX(2px) scale(1.2);
+      -ms-transform: translateX(2px) scale(1.2);
+          transform: translateX(2px) scale(1.2);
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
