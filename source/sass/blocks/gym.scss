@@ -3,6 +3,20 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 24px;
+
+  @include vp-1199 {
+    padding: 102px 0;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 25px;
+  }
+
+  @include vp-767 {
+    padding: 64px 0;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 15px;
+  }
 }
 
 .gym__content {
@@ -13,11 +27,16 @@
   flex-direction: column;
 
   @include vp-1199 {
+    margin-top: 0;
+    max-width: 505px;
+    justify-self: center;
     justify-content: center;
+    text-align: center;
   }
 
   @include vp-767 {
-    justify-content: start;
+    max-width: 100%;
+    text-align: left;
   }
 }
 
@@ -30,15 +49,13 @@
   letter-spacing: 0.03em;
 
   @include vp-1199 {
-    margin-bottom: 6px;
-    text-align: center;
+    margin: 0 0 0 -16px;
     font-size: 42px;
-    line-height: 50px;
+    line-height: 48px;
   }
 
   @include vp-767 {
-    margin-bottom: 20px;
-    text-align: left;
+    margin: 0 0 5px 0;
     font-size: 32px;
     line-height: 38px;
   }
@@ -51,17 +68,21 @@
   line-height: 27px;
 
   @include vp-1199 {
-    margin-bottom: 50px;
+    margin-bottom: 34px;
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 }
 
 .gym__content p {
   margin: 0 0 8px;
   font-weight: 300;
+
+  @include vp-767 {
+    padding-right: 30px;
+  }
 
   &:nth-of-type(n+2) {
     @include vp-1199 {
@@ -72,12 +93,26 @@
 
 .gym__media {
   justify-self: end;
+
+  @include vp-1199 {
+    justify-self: center;
+  }
+
+  @include vp-767 {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
 .gym__image {
+  @include vp-1199 {
+    img {
+      width: 100%;
+    }
+  }
+
   @include vp-767 {
     width: 100vw;
-    margin-left: -15px;
     margin-bottom: 40px;
 
     img {
@@ -92,9 +127,17 @@
   width: 364px;
   height: 228px;
 
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+    margin-left: 30%;
+    margin-top: -12%;
+  }
+
   @include vp-767 {
     width: 100vw;
-    margin-left: -15px;
+    height: auto;
+    margin: 0;
 
     img {
       width: 100%;

@@ -26,6 +26,17 @@
     width: 100px;
     height: 100px;
     background: $color-transparent url("./../img/svg/play-circle.svg") no-repeat center;
+    background-size: cover;
+  }
+
+  @include vp-1199 {
+    width: 52px;
+    height: 52px;
+
+    &::before {
+      width: 73px;
+      height: 73px;
+    }
   }
 
   &:hover,
