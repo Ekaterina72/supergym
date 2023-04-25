@@ -1127,6 +1127,208 @@ button,
   border: none;
 }
 
+[data-tabs=parent] {
+  overflow: hidden;
+}
+[data-tabs=parent].no-transition > [data-tabs=control],
+[data-tabs=parent].no-transition > [data-tabs=content],
+[data-tabs=parent].no-transition > [data-tabs=element] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+[data-tabs=parent].no-transition-global [data-tabs=control],
+[data-tabs=parent].no-transition-global [data-tabs=content],
+[data-tabs=parent].no-transition-global [data-tabs=element] {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent] [data-tabs=content] {
+  position: relative;
+}
+
+[data-tabs=element] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  -o-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs=element].for-load {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+[data-tabs=element].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+.subscription {
+  position: relative;
+  background-color: #f8f9fc;
+}
+.subscription::before {
+  position: absolute;
+  content: "";
+  width: 287px;
+  height: 494px;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0) url("./../img/svg/barbell-disks.svg") no-repeat center;
+}
+
+.subscription__container {
+  padding: 120px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1199px) {
+  .subscription__container {
+    padding: 100px 0 58px;
+  }
+}
+@media (max-width: 767px) {
+  .subscription__container {
+    padding: 70px 0 70px;
+  }
+}
+
+.subscription__controls {
+  margin-bottom: 39px;
+}
+
+.subscription__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.subscription__item-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+@media (max-width: 1199px) {
+  .subscription__item-list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1023px) {
+  .subscription__item-list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+.subscription__item-option {
+  padding: 68px 77px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+}
+
+.subscription h2 {
+  margin: 0 0 25px;
+  font-weight: 600;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 1199px) {
+  .subscription h2 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .subscription h2 {
+    margin: 0 0 35px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.subscription h3 {
+  margin: 0 0 22px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+}
+@media (max-width: 767px) {
+  .subscription h3 {
+    margin: 0 0 20px;
+    font-size: 2px;
+    line-height: 24px;
+  }
+}
+
+.subscription b {
+  margin: 0 0 96px;
+  font-weight: 400;
+}
+
+.subscription__price {
+  position: relative;
+  margin: 0 0 59px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: #103aae;
+  z-index: 2;
+}
+
+.subscription__price span {
+  position: absolute;
+  top: -50%;
+  left: -19px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100%;
+  color: #e8e8e8;
+  z-index: -1;
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
