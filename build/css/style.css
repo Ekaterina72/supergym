@@ -996,12 +996,12 @@ button,
 }
 @media (max-width: 1199px) {
   .gym__media {
-    -ms-grid-column-align: center;
-        justify-self: center;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
   .gym__media {
+    width: auto;
     margin-left: -15px;
     margin-right: -15px;
   }
@@ -1028,10 +1028,15 @@ button,
   width: 364px;
   height: 228px;
 }
+.gym__video img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (max-width: 1199px) {
   .gym__video {
-    width: 266px;
-    height: 167px;
+    width: 40%;
+    height: auto;
     margin-left: 30%;
     margin-top: -12%;
   }
@@ -1042,13 +1047,11 @@ button,
     height: auto;
     margin: 0;
   }
-  .gym__video img {
-    width: 100%;
-  }
 }
 
 .video {
   position: relative;
+  cursor: pointer;
 }
 
 .video__button {
@@ -1059,9 +1062,6 @@ button,
   height: 72px;
   padding: 0;
   padding-left: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1078,6 +1078,7 @@ button,
   -webkit-box-shadow: 0 0 0 10px transparent;
           box-shadow: 0 0 0 10px transparent;
   cursor: pointer;
+  display: none;
 }
 .video__button::before {
   position: absolute;
@@ -1098,9 +1099,32 @@ button,
   }
 }
 .video__button:hover svg, .video__button:focus svg {
-  -webkit-transform: translateX(2px) scale(1.2);
-      -ms-transform: translateX(2px) scale(1.2);
-          transform: translateX(2px) scale(1.2);
+  -webkit-transform: translateX(1px) scale(1.2);
+      -ms-transform: translateX(1px) scale(1.2);
+          transform: translateX(1px) scale(1.2);
+}
+
+.is--active .video__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video:hover .video__button-icon {
+  -webkit-transform: translateX(1px) scale(1.2);
+      -ms-transform: translateX(1px) scale(1.2);
+          transform: translateX(1px) scale(1.2);
+  -webkit-transition: -webkit-transform 0.03s ease-in-out;
+  transition: -webkit-transform 0.03s ease-in-out;
+  -o-transition: transform 0.03s ease-in-out;
+  transition: transform 0.03s ease-in-out;
+  transition: transform 0.03s ease-in-out, -webkit-transform 0.03s ease-in-out;
+}
+
+.video__frame {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .custom-input,
