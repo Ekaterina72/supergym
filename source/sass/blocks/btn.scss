@@ -17,11 +17,6 @@
 
   transition: color $trans-default, background-color $trans-default, border-color $trans-default;
 
-  &--secondary {
-    color: $color-sapphire;
-    border: 2px solid $color-sapphire;
-  }
-
   &:disabled {
     opacity: 0.5;
 

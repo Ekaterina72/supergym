@@ -605,10 +605,6 @@ button,
   -o-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
-.btn--secondary {
-  color: #102654;
-  border: 2px solid #102654;
-}
 .btn:disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -882,7 +878,7 @@ button,
 }
 @media (max-width: 1199px) {
   .gym__container {
-    padding: 102px 0;
+    padding: 102px 0 94px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -webkit-box-align: center;
@@ -893,7 +889,7 @@ button,
 }
 @media (max-width: 767px) {
   .gym__container {
-    padding: 64px 0;
+    padding: 64px 0 70px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -webkit-box-align: center;
@@ -1175,16 +1171,47 @@ button,
 
 .subscription {
   position: relative;
-  background-color: #f8f9fc;
+  padding-bottom: 72px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(8%, #ffffff), color-stop(8%, #f8f9fc));
+  background: -o-linear-gradient(bottom, #ffffff 8%, #f8f9fc 8%);
+  background: linear-gradient(to top, #ffffff 8%, #f8f9fc 8%);
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+@media (max-width: 1199px) {
+  .subscription {
+    padding-bottom: 98px;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(3%, #ffffff), color-stop(3%, #f8f9fc));
+    background: -o-linear-gradient(bottom, #ffffff 3%, #f8f9fc 3%);
+    background: linear-gradient(to top, #ffffff 3%, #f8f9fc 3%);
+  }
+}
+@media (max-width: 767px) {
+  .subscription {
+    padding-bottom: 0;
+    background: #f8f9fc;
+  }
 }
 .subscription::before {
   position: absolute;
   content: "";
-  width: 287px;
-  height: 494px;
+  width: 100%;
+  height: 100%;
   bottom: 0;
   right: 0;
   background: rgba(255, 255, 255, 0) url("./../img/svg/barbell-disks.svg") no-repeat center;
+  background-position: bottom -80px right -184px;
+}
+@media (max-width: 1199px) {
+  .subscription::before {
+    background-size: 423px;
+    background-position: bottom -71px right -76px;
+  }
+}
+@media (max-width: 767px) {
+  .subscription::before {
+    display: none;
+  }
 }
 
 .subscription__container {
@@ -1202,17 +1229,107 @@ button,
 }
 @media (max-width: 1199px) {
   .subscription__container {
-    padding: 100px 0 58px;
+    padding: 101px 0 58px;
   }
 }
 @media (max-width: 767px) {
   .subscription__container {
-    padding: 70px 0 70px;
+    padding: 64px 0 70px;
+  }
+}
+
+.subscription h2 {
+  margin: 0 0 21px;
+  font-weight: 600;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+}
+@media (max-width: 1199px) {
+  .subscription h2 {
+    margin: 0 0 23px -14px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .subscription h2 {
+    margin: 0 0 25px -10px;
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 
 .subscription__controls {
-  margin-bottom: 39px;
+  position: relative;
+  margin-bottom: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 47px;
+}
+.subscription__controls::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -16px;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(120, 120, 120, 0.2);
+}
+@media (max-width: 1199px) {
+  .subscription__controls {
+    gap: 55px;
+    margin-bottom: 59px;
+  }
+}
+@media (max-width: 767px) {
+  .subscription__controls {
+    gap: 45px;
+    margin-bottom: 50px;
+  }
+}
+
+.subscription__button {
+  position: relative;
+  padding: 0;
+  font-size: 20px;
+  color: rgba(16, 38, 84, 0.5);
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+@media (max-width: 1199px) {
+  .subscription__button {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .subscription__button {
+    font-size: 16px;
+  }
+}
+@media (hover: hover) {
+  .subscription__button:hover:not(.focus-visible) {
+    color: #102654;
+  }
+}
+.subscription__button.focus-visible:focus {
+  color: #102654;
+}
+
+.subscription__controls > .is-active {
+  color: #102654;
+}
+.subscription__controls > .is-active::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -16px;
+  width: 100%;
+  height: 2px;
+  background-color: #d10a42;
 }
 
 .subscription__list {
@@ -1222,7 +1339,12 @@ button,
   width: 100%;
 }
 
+.subscription__item {
+  width: 100%;
+}
+
 .subscription__item-list {
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1234,19 +1356,21 @@ button,
 }
 @media (max-width: 1199px) {
   .subscription__item-list {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 1023px) {
-  .subscription__item-list {
+    padding: 0 118px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 767px) {
+  .subscription__item-list {
+    padding: 0;
+    gap: 34px;
+  }
+}
 
 .subscription__item-option {
-  padding: 68px 77px;
+  padding: 56px 40px;
+  min-height: 448px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1257,53 +1381,59 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #ffffff;
-}
-
-.subscription h2 {
-  margin: 0 0 25px;
-  font-weight: 600;
-  font-family: "Alumni Sans", "Arial", sans-serif;
-  font-size: 54px;
-  line-height: 65px;
-  letter-spacing: 0.03em;
-}
-@media (max-width: 1199px) {
-  .subscription h2 {
-    font-size: 42px;
-    line-height: 50px;
-  }
+  border: 7px solid rgba(255, 255, 255, 0);
 }
 @media (max-width: 767px) {
-  .subscription h2 {
-    margin: 0 0 35px;
-    font-size: 32px;
-    line-height: 38px;
+  .subscription__item-option {
+    min-height: 384px;
+    padding: 44px 30px;
   }
+}
+.subscription__item-option:hover {
+  border-color: #00359f;
+  -o-border-image: -o-linear-gradient(right bottom, #00359f, #d10a42) 1;
+     border-image: -webkit-gradient(linear, right bottom, left top, from(#00359f), to(#d10a42)) 1;
+     border-image: linear-gradient(to left top, #00359f, #d10a42) 1;
+}
+.subscription__item-option:focus-within {
+  border-color: #00359f;
+  -o-border-image: -o-linear-gradient(right bottom, #00359f, #d10a42) 1;
+     border-image: -webkit-gradient(linear, right bottom, left top, from(#00359f), to(#d10a42)) 1;
+     border-image: linear-gradient(to left top, #00359f, #d10a42) 1;
 }
 
 .subscription h3 {
-  margin: 0 0 22px;
+  margin: 0 0 10px;
   font-weight: 700;
   font-size: 26px;
   line-height: 29px;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .subscription h3 {
-    margin: 0 0 20px;
-    font-size: 2px;
+    margin: 0 0 9px;
+    font-size: 22px;
     line-height: 24px;
   }
 }
 
 .subscription b {
-  margin: 0 0 96px;
+  margin: 0 0 65px;
   font-weight: 400;
+}
+@media (max-width: 767px) {
+  .subscription b {
+    margin-bottom: 46px;
+  }
 }
 
 .subscription__price {
   position: relative;
-  margin: 0 0 59px;
+  margin: 0 0 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1317,16 +1447,57 @@ button,
   color: #103aae;
   z-index: 2;
 }
+@media (max-width: 767px) {
+  .subscription__price {
+    margin: 0 0 20px 3px;
+    font-size: 48px;
+    gap: 10px;
+  }
+  .subscription__price svg {
+    width: 24px;
+    height: 33px;
+  }
+}
 
 .subscription__price span {
   position: absolute;
-  top: -50%;
+  top: -32%;
   left: -19px;
+  min-height: 66px;
   font-weight: 700;
   font-size: 100px;
   line-height: 100%;
   color: #e8e8e8;
   z-index: -1;
+}
+@media (max-width: 767px) {
+  .subscription__price span {
+    font-size: 80px;
+  }
+}
+
+.subscription__link {
+  padding: 26px 45px;
+  color: #102654;
+  border: none;
+  outline: 2px solid #102654;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+@media (hover: hover) {
+  .subscription__link:hover:not(.focus-visible) {
+    background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    color: #ffffff;
+    outline: none;
+  }
+}
+.subscription__link.focus-visible:focus {
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: #ffffff;
+  outline: none;
 }
 
 .custom-input,
