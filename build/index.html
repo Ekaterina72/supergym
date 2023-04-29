@@ -282,9 +282,14 @@
         <div class="container">
           <h2>Тренеры</h2>
           <div class="coaches__container">
-            <div class="swiper swiper-coaches">
+            <div class="coaches__arrow-button coaches__arrow-button--prev swiper-button-prev">
+              <svg class="coaches__arrow-button-icon" width="16" height="32" viewBox="0 0 16 32" aria-hidden="true">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
+            </div>
+            <div class="swiper coaches__slider">
               <ul class="coaches__list swiper-wrapper">
-                <li class="coaches__item swiper-slide">
+                <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__content-wrapper">
                     <div class="coaches__content">
                       <h3>Анна Павлова</h3>
@@ -306,7 +311,7 @@
                     </picture>
                   </div>
                 </li>
-                <li class="coaches__item swiper-slide">
+                <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__content-wrapper">
                     <div class="coaches__content">
                       <h3>Алексей Лавров</h3>
@@ -328,7 +333,7 @@
                     </picture>
                   </div>
                 </li>
-                <li class="coaches__item swiper-slide">
+                <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__content-wrapper">
                     <div class="coaches__content">
                       <h3>Александр Пашков</h3>
@@ -350,7 +355,7 @@
                     </picture>
                   </div>
                 </li>
-                <li class="coaches__item swiper-slide">
+                <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__content-wrapper">
                     <div class="coaches__content">
                       <h3>Мария Кетова</h3>
@@ -372,7 +377,7 @@
                     </picture>
                   </div>
                 </li>
-                <li class="coaches__item swiper-slide">
+                <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__content-wrapper">
                     <div class="coaches__content">
                       <h3>Анна Павлова</h3>
@@ -394,7 +399,7 @@
                     </picture>
                   </div>
                 </li>
-                <li class="coaches__item swiper-slide">
+                <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__content-wrapper">
                     <div class="coaches__content">
                       <h3>Алексей Лавров</h3>
@@ -416,7 +421,7 @@
                     </picture>
                   </div>
                 </li>
-                <li class="coaches__item swiper-slide">
+                <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__content-wrapper">
                     <div class="coaches__content">
                       <h3>Александр Пашков</h3>
@@ -438,7 +443,7 @@
                     </picture>
                   </div>
                 </li>
-                <li class="coaches__item swiper-slide">
+                <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__content-wrapper">
                     <div class="coaches__content">
                       <h3>Мария Кетова</h3>
@@ -462,17 +467,11 @@
                 </li>
               </ul>
             </div>
-            <div class="coaches__arrow-buttons">
-              <div class="coaches__arrow-button coaches__arrow-button--prev swiper-button-prev">
-                <svg class="coaches__arrow-button-icon" width="16" height="32" viewBox="0 0 16 32" aria-hidden="true">
-                  <use href="img/sprite.svg#icon-slider-arrow"></use>
-                </svg>
-              </div>
-              <div class="coaches__arrow-button coaches__arrow-button--next swiper-button-next">
-                <svg class="coaches__arrow-button-icon" width="16" height="32" viewBox="0 0 16 32" aria-hidden="true">
-                  <use href="img/sprite.svg#icon-slider-arrow"></use>
-                </svg>
-              </div>
+
+            <div class="coaches__arrow-button coaches__arrow-button--next swiper-button-next">
+              <svg class="coaches__arrow-button-icon" width="16" height="32" viewBox="0 0 16 32" aria-hidden="true">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </div>
           </div>
         </div>
