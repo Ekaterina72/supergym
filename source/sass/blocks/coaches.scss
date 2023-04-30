@@ -2,11 +2,11 @@
   padding: 53px 0 140px;
 
   @include vp-1199 {
-    padding: 46px 0 140px;
+    padding: 46px 0 100px;
   }
 
   @include vp-767 {
-    padding: 32px 0 40px;
+    padding: 32px 0 70px;
   }
 }
 
@@ -74,7 +74,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 52px 40px;
+  padding: 52px 40px 45px;
   overflow-y: auto;
   scrollbar-width: none;
   background-color: rgba(16, 38, 84, 0.89);
