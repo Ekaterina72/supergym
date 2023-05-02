@@ -1,0 +1,133 @@
+.contacts {
+  padding: 50px 0 59px;
+  background-color: $color-default-white;
+  display: flex;
+  justify-content: end;
+
+  @include vp-1199 {
+    padding: 55px 0 62px 88px;
+    justify-content: start;
+  }
+
+  @include vp-767 {
+    padding: 59px 0 62px;
+  }
+}
+
+.contacts h2 {
+  margin: 0 0 28px;
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin: 0 0 26px;
+    font-size: 42px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 29px;
+    font-size: 32px;
+  }
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 233px 225px;
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
+}
+
+.contacts__item {
+  &:nth-child(odd) {
+    grid-column: 1;
+    padding-right: 15px;
+    border-right: 1px solid #74819c;
+  }
+
+  &:nth-child(even) {
+    grid-column: 2;
+    padding-left: 60px;
+  }
+
+  &:nth-child(n + 3) {
+    padding-top: 13px;
+  }
+
+  @include vp-1199 {
+    &:nth-child(odd) {
+      padding-right: 48px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 48px;
+    }
+
+    &:nth-child(n + 3) {
+      padding-top: 19px;
+    }
+  }
+
+  @include vp-767 {
+    &:nth-child(odd) {
+      padding: 0;
+      border-right: none;
+    }
+
+    &:nth-child(even) {
+      padding: 0;
+      grid-column: 1;
+      order: 2;
+    }
+  }
+}
+
+.contacts h3 {
+  margin: 0 0 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+
+  @include vp-1199 {
+    margin: 0 0 6px;
+    font-size: 20px;
+  }
+}
+
+.contacts p,
+.contacts address,
+.contacts a {
+  margin: 0;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 130%;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 150%;
+  }
+}
+
+.contacts a {
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+
+  @include active {
+    opacity: 0.5;
+  }
+}

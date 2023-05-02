@@ -1,0 +1,58 @@
+.submit-form {
+  display: grid;
+  grid-template-columns: repeat(2, 190px);
+  column-gap: 30px;
+  row-gap: 27px;
+
+  @include vp-1199 {
+    width: 472px;
+    grid-template-columns: repeat(2, 206px);
+    column-gap: 60px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+.submit-form input {
+  width: 100%;
+  padding: 10px 10px 6px 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 100%;
+  border: none;
+  border-bottom: 1px solid #74819c;
+  color: $color-default-white;
+  background-color: transparent;
+
+  &::placeholder {
+    font: inherit;
+    color: $color-default-white;
+  }
+
+  @include hover-focus {
+    box-shadow: 0 2px 0 0 $color-default-white;
+  }
+
+  @include active {
+    box-shadow: 0 2px 0 0 $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.submit-form__button {
+  padding: 17px 45px;
+  grid-column: span 2;
+  font-size: 14px;
+
+  @include vp-767 {
+    margin-top: 9px;
+    grid-column: 1;
+  }
+}

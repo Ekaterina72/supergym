@@ -39,6 +39,12 @@
   }
 }
 
+.header__contacts {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 .header__link {
   color: inherit;
   font-family: $ff-alumni-sans;

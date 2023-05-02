@@ -1,0 +1,16 @@
+.page-bottom {
+  background: linear-gradient(to right, $color-sapphire 50%, $color-default-white 50%);
+
+  @include vp-1199 {
+    background: none;
+  }
+}
+
+.page-bottom__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+}
