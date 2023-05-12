@@ -52,6 +52,16 @@
   display: flex;
 }
 
+.video__button-icon {
+  width: 17px;
+  height: 17px;
+
+  @include vp-1199 {
+    width: 12px;
+    height: 12px;
+  }
+}
+
 .video:hover .video__button-icon {
   transform: translateX(1px) scale(1.2);
   transition: transform 0.03s ease-in-out;

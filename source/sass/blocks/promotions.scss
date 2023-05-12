@@ -60,6 +60,7 @@
   }
 
   &:nth-child(n + 2) {
+    min-height: 211px;
     padding: 26px 28px;
     border: 7px solid;
     border-image: linear-gradient(to left top, #00359f, #d10a42) 1;

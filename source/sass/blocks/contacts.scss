@@ -1,5 +1,5 @@
 .contacts {
-  padding: 50px 0 59px;
+  padding: 50px 0 66px;
   background-color: $color-default-white;
   display: flex;
   justify-content: end;
@@ -51,6 +51,9 @@
 }
 
 .contacts__item {
+  display: flex;
+  flex-direction: column;
+
   &:nth-child(odd) {
     grid-column: 1;
     padding-right: 15px;
@@ -63,7 +66,7 @@
   }
 
   &:nth-child(n + 3) {
-    padding-top: 13px;
+    padding-top: 19px;
   }
 
   @include vp-1199 {

@@ -54,9 +54,11 @@
 
 .reviews__item {
   width: 560px;
+  height: auto;
   padding: 60px 63px 50px;
   display: grid;
   grid-template-columns: 80px auto;
+  grid-template-rows: min-content;
   column-gap: 26px;
   color: $color-default-white;
   background-color: $color-resolution-blue;

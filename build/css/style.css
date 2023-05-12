@@ -1222,6 +1222,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -1509,6 +1510,8 @@ button,
   width: 122px;
   height: 24px;
   margin-top: 5px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media (max-width: 1199px) {
   .header__logo {
@@ -1740,7 +1743,7 @@ button,
 }
 @media (max-width: 1199px) {
   .gym__container {
-    padding: 102px 0 94px;
+    padding: 102px 0 101px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -webkit-box-align: center;
@@ -1893,10 +1896,10 @@ button,
 }
 @media (max-width: 1199px) {
   .gym__video {
-    width: 40%;
+    width: 38.8%;
     height: auto;
-    margin-left: 30%;
-    margin-top: -12%;
+    margin-left: 30.5%;
+    margin-top: -12.3%;
   }
 }
 @media (max-width: 767px) {
@@ -1966,6 +1969,17 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.video__button-icon {
+  width: 17px;
+  height: 17px;
+}
+@media (max-width: 1199px) {
+  .video__button-icon {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .video:hover .video__button-icon {
@@ -2601,6 +2615,12 @@ button,
   position: relative;
   width: 260px;
   height: 294px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (max-width: 1199px) {
   .coaches__list .coaches__item {
@@ -2618,7 +2638,7 @@ button,
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 260px;
   height: 100%;
   padding: 52px 40px 45px;
   overflow-y: auto;
@@ -2630,8 +2650,14 @@ button,
   transition: opacity 0.3s ease;
   z-index: 3;
 }
+@media (max-width: 1199px) {
+  .coaches__content-wrapper {
+    width: 268px;
+  }
+}
 @media (max-width: 767px) {
   .coaches__content-wrapper {
+    width: 100%;
     padding: 43px 21px 40px;
   }
 }
@@ -2714,11 +2740,17 @@ button,
 
 .coaches__image {
   position: relative;
-  width: 100%;
+  width: 260px;
   height: 100%;
+}
+@media (max-width: 1199px) {
+  .coaches__image {
+    width: 268px;
+  }
 }
 @media (max-width: 767px) {
   .coaches__image {
+    width: 100%;
     min-height: 274px;
   }
 }
@@ -2935,8 +2967,7 @@ button,
   }
 }
 .advantages__item--highlighted {
-  height: 100%;
-  padding: 30px;
+  padding: 62px 30px 59px;
   -ms-grid-column: 2;
   grid-column: 2;
   -ms-grid-row: 1;
@@ -3046,7 +3077,7 @@ button,
 }
 
 .advantages__item--highlighted h3 {
-  margin: 0 0 37px;
+  margin: 0 0 41px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3178,6 +3209,7 @@ button,
   }
 }
 .promotions__item:nth-child(n+2) {
+  min-height: 211px;
   padding: 26px 28px;
   border: 7px solid;
   -o-border-image: -o-linear-gradient(right bottom, #00359f, #d10a42) 1;
@@ -3407,11 +3439,16 @@ button,
 
 .reviews__item {
   width: 560px;
+  height: auto;
   padding: 60px 63px 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 80px auto;
   grid-template-columns: 80px auto;
+  -ms-grid-rows: -webkit-min-content;
+  -ms-grid-rows: min-content;
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
   -webkit-column-gap: 26px;
      -moz-column-gap: 26px;
           column-gap: 26px;
@@ -3558,7 +3595,7 @@ button,
 }
 
 .submit {
-  padding: 57px 50px 59px 0;
+  padding: 57px 50px 66px 0;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3701,7 +3738,7 @@ button,
 }
 
 .contacts {
-  padding: 50px 0 59px;
+  padding: 50px 0 66px;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3768,6 +3805,15 @@ button,
   }
 }
 
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .contacts__item:nth-child(odd) {
   -ms-grid-column: 1;
   grid-column: 1;
@@ -3780,7 +3826,7 @@ button,
   padding-left: 60px;
 }
 .contacts__item:nth-child(n+3) {
-  padding-top: 13px;
+  padding-top: 19px;
 }
 @media (max-width: 1199px) {
   .contacts__item:nth-child(odd) {
