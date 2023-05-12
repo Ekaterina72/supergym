@@ -41,4 +41,24 @@ const swiperCoaches = new Swiper('.coaches__slider', {
 
 });
 
+const createSlidesTabs = () => {
+  const slides = document.querySelectorAll('[data-slide]');
+  const slidesObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+        entry.target.setAttribute('tabindex', '0');
+      } else {
+        entry.target.removeAttribute('tabindex', '0');
+      }
+    });
+  });
+
+  slides.forEach((slide) => slidesObserver.observe(slide));
+
+
+};
+
+createSlidesTabs();
+
 export {swiperCoaches};
